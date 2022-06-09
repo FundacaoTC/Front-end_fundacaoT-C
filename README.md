@@ -1,2 +1,2 @@
-# Front-end_fundacaoT-C
-O Fundação T&amp;C é uma plataforma de ensino focado em tecnologia, temos como principal objectivo dar visibilidade para professores e alunos para o mercado de trabalho 
+# Fundação T&C / Front-end
+O Fundação T&C é uma plataforma de ensino focado em tecnologia, onde temos como principal objectivo dar visibilidade para professores e alunos no mercado de trabalho.
