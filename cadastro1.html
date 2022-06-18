@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="./css/cadastro1.css" />
+  </head>
+  <body>
+     <!-- Header -->
+     <header>
+      <div class="container_logo">
+          <a href="#">
+            <img src="./assets/logo.svg" alt="Tres Bolinhas atras da logo do produto" />
+          </a>
+      <!-- Botoões -->
+          <a class="botao" href="#">Logo</a>
+      </div>
+      <div class="container_botoes">
+          <a class="botao" href="#">Home</a>
+          <a class="botao" href="#">Info</a>
+          <a class="botao" href="#">Cursos</a>
+      </div>
+      <!-- Login e cadastro -->
+      <div class="container_login">
+          <a class="botao" href="#">Sign Up</a>
+          <button class="entrar" href="#">Log In</button>
+      </div>
+  </header>
+  <!-- fim Header -->
+    <!-- FORMS -->
+    <article>
+      <h1>
+        Seja bem-vindo a<br />
+        Fundação T&C
+      </h1>
+    </article>
+    <section class="coluna-a">
+      <main>
+        <form>
+          <h3>Nome:</h3>
+          <input
+          type="text" 
+          id="name" 
+          maxlength="200" 
+          name="name" 
+          placeholder="   Nome Completo"
+          />
+          <h3>Email:</h3>
+          <input
+          type="email" 
+          id="email" 
+          maxlength="200" 
+          name="email" 
+          placeholder="   seuemail@site.com" 
+          required
+          />
+          <h3>Telefone:</h3>
+          <input
+          type="tel" 
+          id="phone" 
+          maxlength="14" 
+          name="phone"
+          pattern="[0-9]{2}[9]{1}[0-9]{4}-[0-9]{4}"
+          placeholder="   xx 9xxxx-xxxx"
+          required
+          />
+          <h3>Termos de compromisso:</h3>
+          <div class="dropdown">
+            <button class="dropbt">Leia Mais..
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <button onclick="" name="aceito" id="aceito">Aceito</button>
+          <button onclick="" name="proximo" id="proximo">Proximo -></button>
+        </form>
+      </main>
+      <!-- SVG -->
+      <div class="svg-container">
+        <img src="./assets/nova-etapa.svg"/>
+        <h3>Pronto para ingressar<br> em uma nova etapa ?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur<br> 
+            adipiscing elit. Suspendisse tincidunt urna<br> 
+            eget nibh commodo, vel posuere erat vulputate.<br> 
+            Aenean aliquam, velit sed pharetra<br> 
+            interdum, turpis dolor convallis leo, a<br> 
+            consectetur urna nisl vitae turpis. Praesent<br> 
+            vel massa lectus. Vestibulum<br> 
+            tincidunt dui. Vivamus lacinia urna.<br>
+            Um beijo na bochecha,<br>
+            Equipe T&C</p>
+        
+      </div>
+    </section>
+    <!-- RODAPE -->
+    <footer>
+      <p class="cadastro-prof">
+        Quer fazer o cadastro como professor?<br>
+        <a href="#"> Clique aqui </a></p>
+      <div class="rodape"></div>
+        <img class="ondas" src="./assets/wave.svg" alt="Rodapé da Pagina">
+      </div>
+    </footer>
+  </body>
+</html>
