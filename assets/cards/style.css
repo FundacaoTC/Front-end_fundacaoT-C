@@ -1,0 +1,72 @@
+body {
+    padding: 0;
+    margin: 0;
+
+}
+
+main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.Container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.Card {
+    width: 52vh;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(0a4dcb92fa2d3c601b58d72720d6bec4.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.Txt {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    color: #fff;
+    margin-bottom: 5%;
+    z-index: 10;
+}
+
+.photo {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    bottom: 0;
+    border-radius: 20px;
+}
+
+.Profile {
+    top: 22%;
+    position: absolute;
+    width: 60px;
+    z-index: 10;
+}
+
+
+.btn {
+    width: 30%;
+    border-radius: 20px;
+    background-color: darkblue;
+    color: #fff;
+    padding: 10px;
+    border: none;
+
+    margin-top: 5%;
+}
