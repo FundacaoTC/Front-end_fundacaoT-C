@@ -1,0 +1,255 @@
+.navbar{
+    background: linear-gradient(180deg, #1B1C37 0.51%, #1B1C37 0.52%, #292A52 100%);
+    color: #fff;
+    font-family: 'Poppins';
+    font-weight: 500;
+    margin-left: 0.70rem;
+    margin-right: 0.70rem;
+}
+.navbar a{
+    color: #fff;
+    font-size: 1.2rem;
+}
+.navbar a:hover{
+    color: #7579FF;
+}
+#log-in{
+    background-color: #7579FF;
+    color: #fff;
+    outline: none;
+    margin-left: 1rem;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Poppins';
+  }
+  
+  #logo{
+      font-weight: 500;
+  }
+
+  /*Main*/
+  body{
+    font-family: 'Poppins';
+    overflow-x:hidden;
+  }
+  .margin{
+    margin: -2rem;
+    margin-left: 4.5rem;
+  }
+
+
+  .txt-svg{
+    margin-left: 20%;
+    margin-top: -50%;
+    color: #fff;
+  }
+
+  .titulo{
+    margin-top: 0%;
+    margin-right: 5%;
+    font-size: 2rem;
+  }
+
+  .sub{
+    margin-top: 0%;
+    margin-left: 0%;
+    font-size: 2rem;
+  }
+  
+.login-icon{
+  margin-right: 0%;
+}
+  /*Forms*/
+  form{
+    margin-top: -37%;
+    margin-left: 25%;
+    color: #fff;
+    font-family: 'Poppins';
+    width: 45vw;
+  }
+
+  form input{
+    width: 50%;
+  }
+  
+.email{
+  margin-left: -10%;
+  width: 35vw;
+}
+
+.senha{
+  width: 30vw;
+}
+
+#logar-se{
+margin-top: 5%;
+margin-left: 20%;
+background: #7579FF;
+color: #fff;
+font-family: 'Poppins';
+font-weight: 500;
+
+}
+
+label{
+  font-weight:500;
+  font-size: 1.5rem;
+}
+
+/* Footer*/
+footer{
+  margin-top: -10%;
+}
+
+/*Media Queries*/
+/*Até a resolução 1024px*/
+@media screen and (max-width:1025px){
+
+  body{
+    font-size: 1.0em;
+  }
+  .txt-svg{
+    margin-left: 22%;
+    margin-top: -55%;
+    color: #fff;
+  }
+  .titulo{
+    margin-top: 0%;
+    margin-right: 5%;
+    font-size: 1.75rem;
+  }
+  .sub{
+    margin-top: 0%;
+    margin-left: 0%;
+    font-size: 1.45rem;
+  }
+  form{
+    margin-left: 30%;
+    margin-top: -40%;
+  }
+  label{
+    font-size: 1.0em;
+  }
+}
+/*Funcionando de 1440px até 992px*/
+
+  /*Até a resolução 991px*/
+@media screen and (max-width:991px){
+  body{
+    max-width: 991px;
+  }
+  .svg-main{
+    width: 150%;
+    height: 100vh;
+    margin-left: 50%;
+    margin-top: -15%;
+  }
+
+  .txt-svg{
+    margin-left: 15%;
+    margin-top: -36.5%;
+  }
+  .titulo{
+    margin-top: 0%;
+    margin-right: 10%;
+    font-size: 0.8rem;
+  }
+  .sub{
+    margin-top: 0%;
+    margin-left: -11%;
+    font-size: 0.8rem;
+  }
+  .sub img{
+    width: 11.5%;
+  }
+  .login-icon{
+    margin-left: 2%;
+    width: 7%;
+  }
+  .face-icon{
+    margin-left: -7%;
+    width: 4.5%;
+  }
+
+  form{
+    margin-top: 19%;
+    margin-left: 5%;
+  }
+  
+  form input{
+    max-width: 15vw;
+    max-height: 10vh;
+    margin-bottom: 0px;
+  }
+
+  .email{
+    font-size: 0.5rem;
+    margin-bottom: 2%;
+    margin-left: -15%;
+  }
+  
+  .senha{
+    max-width: 13vw;
+    font-size: 0.5rem;
+    margin-top: -8%;
+  }
+  label{
+    font-size: 0.5rem;
+  }
+  .label-senha{
+    margin-left: -6%;
+    margin-bottom: 2.8%;
+  }
+  .label-email{
+    margin-left: -20%;
+  }
+  #logar-se{
+    font-size: 0.6rem;
+    margin-left: -3%;
+    margin-top: -2%;
+  }
+}
+/*Responsivo até 915px*/
+/*De 915px*/
+@media screen and (max-width:915px){
+  body{
+    max-width: 915px;
+  }
+  .txt-svg{
+    margin-left: 17%;
+    margin-top: -40%;
+  }
+}
+/*Responsivo até 860px*/
+/*Até 600*/
+@media screen and (max-width:600px){
+  body{
+    max-width: 600px;
+    font-size: 1.0em;
+  }
+
+  .svg-main{
+    width: 100%;
+    height: 100vh;
+    margin-left: 0%;
+    margin-top: 0%;
+  }
+
+  .txt-svg{
+    margin-left: 15%;
+    margin-top: -60%;
+  }
+
+  form{
+    margin-top: -45%;
+    margin-left: 43%;
+  }
+
+  form input{
+    max-width: 20vw;
+  }
+  
+  .label-senha{
+    margin-left: -12%;
+  }
+}

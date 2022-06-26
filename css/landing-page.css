@@ -98,6 +98,14 @@ body {
     font-family: 'Poppins';
   }
 
+  #log-in a{
+    text-decoration: none;
+  }
+
+  #log-in a:hover{
+    color: #3c295f;
+  }
+
   #logo{
     font-weight: 500;
   }
@@ -117,7 +125,27 @@ body {
   }
   /*Fim do Header */
 
-
+  /* BOTÃO VOLTAR AO TOPO */
+  #btn-top {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* deixa o botão fixo*/
+    bottom: 20px; /* Coloca o botão no fim da pagina */
+    right: 30px; /* Coloca o botão 30px a direita  */
+    z-index: 99; /* Impede que o botão seja sobreposto */
+    border: none; /* Remove as bordas */
+    outline: none; /* Remove as outlines */
+    background-color: #7579FF; /* Coloca a corda do botão */
+    color: white; /* Cor do texto */
+    cursor: pointer; /* Adiciona um ponteiro do mouse quando o mesmo passar por cima */
+    padding: 15px; /* Preenchimento para encorpar o botão */
+    border-radius: 10px; /* Deixa os cantos redondos*/
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+  }
+  
+  #btn-top:hover {
+    background-color: #555; /* Adiciona um cinza-escuro no background quando tiver em hover */
+  }
+  /* Fim do Botão voltar ao topo*/
   /* Main */
   main{
     background-color: #1F204C;
