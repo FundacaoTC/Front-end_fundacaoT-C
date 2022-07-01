@@ -6,52 +6,48 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page</title>
+  <title>Fundação T&C</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/landing-page.css">
+  <link rel="stylesheet" href="./css/style.min.css">
 
 </head>
 <body>
    <!--Barra de Navegação-->
-  <nav class="navbar navbar-expand-lg rounded-4 mt-4">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="./assets/logo.svg" alt="">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Cursos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Guia Cultural</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Comunidade</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Professores</a>
-          </li>
-        </ul>
-      </div>
-      <div class="d-flex" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Cadastrar</a>
-          </li>
-          <li class="nav-item text-center">
-            <button type="button" class="btn btn-secondary" id="log-in" > <a href="./login.html"> Entrar</a></button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+   <nav class="navbar navbar-expand-lg rounded-4 mt-4">
+		<div class="container">
+		  <a class="navbar-brand image_logo" href="#"></a>
+		  <div class="" id="">
+			<ul class="navbar-nav">
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Cursos</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Guia Cultural</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Professores</a>
+			  </li>
+			</ul>
+		  </div>
+		  <div class="d-flex" id="navbarSupportedContent">
+			<ul class="navbar-nav w-1 justify-content-between">
+			  <li class="nav-item text-center">
+				<button type="button" class="btn btn-secondary" id="log-in">
+				  <a href="./cadastro1.html" id="log-in w-1">Cadastrar</a>
+				</button>
+			  </li>
+			  <li class="nav-item text-center">
+				<button type="button" class="btn btn-secondary" id="log-in"><a href="./login.html">Entrar</a></button>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+	  <!--Fim da Barra de Navegação-->
   <script src="./bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
  <!--Fim da Barra de Navegação-->
 <!--Header-->
@@ -59,9 +55,9 @@
     <section class="container mt-5">
       <div class="row cen">
         <div class="col-md-6 mt-5">
-          <h1><img src="./assets/bubble-black.svg" alt=""><img src="./assets/linha-reta.svg" alt="" width="9rem"> Fundação T&C</h1>
-          <h3 class="ml-2">Para você não ser mais <br> um desentendido das <br> coisas.</h3>
-          <button type="button" class="btn btn-primary rounded-4 bg-gr btn-wh mt-2" id="conheca-nos"><h6>Conheça-nos</h6></button>
+          <h1 class="text_black"><img src="./assets/bubble-black.svg" alt=""><img src="./assets/linha-reta.svg" alt="" width="9rem">Fundação T&C</h1>
+          <h3 class="ml-2 text_black">Para você não ser mais <br> um desentendido das <br> coisas.</h3>
+          <button type="button" class="btn btn-primary rounded-4 bg-gr btn-wh mt-2" id="conheca-nos"><a href="#quem_somos"><h6 class="text_white">Conheça-nos</h6></a></button>
         </div>
         <div class="col-md-6 mt-5">
           <img src="./assets/undraw-homem-segurando-celular-planetas-ao-fundo.svg" alt="" class="svg-undraw-1" width="100%">
@@ -72,7 +68,7 @@
 <!--Fim do Header-->
 <!--Section das ondas-->
   <section>
-    <img src="./assets/ondas-index.svg" alt="" width="100%">
+    <img src="./assets/ondas_de_cima.svg" alt="" width="100%">
   </section>
 <!--Fim da Section das ondas-->
 
@@ -92,38 +88,38 @@
     <div class="container d-flex mt-5">
       <div class="row">
         <div class="col-lg-3 col-md-6 cen">
-          <a href=""><img class="card-hover" src="./assets/cards_landingpage/aula_1.svg" alt="" width="100%"></a>
+          <a href="#"><img class="card-hover" src="./assets/cards_landingpage/aula_ai.svg" alt="" width="100%"></a>
         </div>
         <div class="col-lg-3 col-md-6 cen">
-          <img class="card-hover" src="./assets/cards_landingpage/aula_2.svg" alt="" width="100%">
+          <a href="#"><img class="card-hover" src="./assets/cards_landingpage/aula_java.svg" alt="" width="100%"></a>
         </div>
         <div class="col-lg-3 col-md-6 cen">
-          <img class="card-hover" src="./assets/cards_landingpage/aula_3.svg" alt="" width="100%">
+          <a href="#"><img class="card-hover" src="./assets/cards_landingpage/aula_git_e_github.svg" alt="" width="100%"></a>
         </div>
         <div class="col-lg-3 col-md-6 cen">
-          <img class="card-hover" src="./assets/cards_landingpage/aula_4.svg" alt="" width="100%">
+          <a href="#"><img class="card-hover" src="./assets/cards_landingpage/aula_design_digital.svg" alt="" width="100%"></a>
         </div>
       </div>  
     </div>
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-6 cen">
-          <img class="card-hover" src="./assets/cards_landingpage/aula_5.svg" alt="" width="100%">
+          <a href="#"><img class="card-hover" src="./assets/cards_landingpage/aula_php.svg" alt="" width="100%"></a>
         </div>
         <div class="col-lg-3 col-md-6 cen">
-          <img class="card-hover" src="./assets/cards_landingpage/aula_6.svg" alt="" width="100%">
+          <a href="#"><img class="card-hover" src="./assets/cards_landingpage/aula_game.svg" alt="" width="100%"></a>
         </div>
         <div class="col-lg-3 col-md-6 cen">
-          <img class="card-hover" src="./assets/cards_landingpage/aula_7.svg" alt="" width="100%">
+          <a href="#"><img class="card-hover" src="./assets/cards_landingpage/aula_edicao_de_video.svg" alt="" width="100%"></a>
         </div>
         <div class="col-lg-3 col-md-6 cen">
-          <img class="card-hover" src="./assets/cards_landingpage/aula_8.svg" alt="" width="100%">
+          <a href="#"><img class="card-hover" src="./assets/cards_landingpage/aula_python.svg" width="100%"></a>
         </div>
       </div>  
     </div>
     <!-- Fim dos Cards-->
     <!--Quem Somos-->
-    <div class="container mt-5">
+    <div class="container mt-5" id="quem_somos">
       <div class="row justify-content-center">
         <div class="col-md-12 text-center mt-5 mb-5">
           <h2> 
@@ -147,25 +143,25 @@
     <!-- Fim de Quem Somos-->
     <div class="container-fluid mt-5 mb-5">
       <div class="row justify-content-center d-flex">
-        <div class="col-lg-1 w-2 text-center">
+        <div class="col-lg-1 w-1 text-center">
           <a href="#"><img src="./assets/seta_roxa_para_a_esquerda.svg" alt=""></a>
         </div>
-        <div class="col-lg-6 w-1">
+        <div class="col-lg-6 w-2">
           <h4 class="text-center titulo_comentraio">O que os nossos alunos dizem sobre a plataforma</h4>
         </div>
-        <div class="col-lg-1 w-2 text-center">
+        <div class="col-lg-1 w-1 text-center">
           <a href="#"><img src="./assets/seta_roxa_para_a_direita.svg" alt=""></a>
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-lg-2 col-md-1 ce">
+        <div class="col-lg-12 col-md-12 text-center">
           <img src="./assets/bolinhas_brancas_e_roxa.svg">
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-lg-4 hidden text-center"><img src="./assets/comentario_daniel.svg"></div>
+        <div class="col-lg-4 hidden "><img src="./assets/comentario_daniel.svg"></div>
         <div class="col-lg-4 text-center"><img src="./assets/comentario_lucas.svg"></div>
-        <div class="col-lg-4 hidden text-center"><img src="./assets/comentario_kaio.svg"></div>
+        <div class="col-lg-4 hidden text-end"><img src="./assets/comentario_kaio.svg"></div>
       </div>
     </div>
     <div class="container mb-5 mt-5">
@@ -198,7 +194,7 @@
     </div>
   </main>
   <div>
-    <img src="./assets/ondas_do_final_da_anding_page.svg" class="w-100 mb-3">
+    <img src="./assets/ondas_do_final_da_landing_page.svg" class="w-100 mb-3">
   </div>
   <footer>
     <div class="container mb-5">
@@ -223,8 +219,8 @@
           <p class="rodape_bold">Let's do it!</p>
           <img src="./assets/redes_sociais.svg" alt="" type="image/.svg"><br>
           <p class="rodape_bold">Cadastrar</p>
-          <p class="rodape_text">Se cadastre e fique por dentro de todos<br>
-            os novos cursos. Vamos fazer isso !</p>
+          <p class="rodape_text">Se cadastre e fique por dentro de todos
+            os novos cursos. Vamos fazer isso!</p>
           <form class="d-flex justify-content-center" action="" method="post">
             <input type="email" id="email" placeholder="Insira seu endereço de Email">
             <input class="btn btn-primary btn_rodape" value="Cadastrar" name="cadastrar" type="submit" placeholder="Cadastrar">
@@ -235,18 +231,17 @@
     <hr>
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 ce">
+        <div class="col-lg-6 text-center">
           <a class="rodape_bold a_decoration">Politica de Privacidade</a>
         </div>
-        <div class="col-lg-6 ce">
+        <div class="col-lg-6 text-center">
           <a class="rodape_bold a_decoration">Termos de Uso</a>
         </div>
       </div>
     </div>
   </footer>
   <!-- Botão para voltar ao topo -->
-<button onclick="topFunction()" id="btn-top" title="Va-para-o-topo"><img src="./assets/arrow-up.svg" alt="seta apontando para cima"></button>
-
+  <button onclick="topFunction()" id="btn-top" title="Va-para-o-topo"><img src="./assets/arrow-up.svg" alt="seta apontando para cima"></button> 
 <!-- Fim do Botão para voltar ao topo -->
   <script src="./js/index.js"></script>
 </body>
