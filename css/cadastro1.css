@@ -18,44 +18,6 @@
   
 /*Barra de Navegação*/
 
-.navbar{
-  background: linear-gradient(180deg, #1B1C37 0.51%, #1B1C37 0.52%, #292A52 100%);
-  color: #fff;
-  font-family: 'Poppins';
-  font-weight: 500;
-  margin-left: 0.70rem;
-  margin-right: 0.70rem;
-}
-.navbar a{
-color: #fff;
-  font-size: 1.2rem;
-}
-.navbar a:hover{
-  color: #7579FF;
-}
-#log-in{
-  background-color: #7579FF;
-  color: #fff;
-  outline: none;
-  font-weight: 500;
-  font-size: 20px;
-  font-family: 'Poppins';
-}
-
-#log-in a{
-  text-decoration: none;
-}
-
-#log-in a:hover{
-  color: #3c295f;
-}
-
-#logo{
-  font-weight: 500;
-}
-.w-1{
-  width: 230px;
-}
 /*Fim Barra de Navegação*/
   /*=== Article ====*/
   article h1 {

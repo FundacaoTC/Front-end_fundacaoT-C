@@ -1,3 +1,41 @@
+<?php 
+  error_reporting(E_ERROR | E_PARSE);
+
+  $pdo = require './php/connect.php';
+
+  session_start();
+
+  $data = $_POST['data'];
+  $senha = $_POST['senha'];
+  $cSenha = $_POST['confSenha'];
+
+  if($data == '' || $senha == '' || $cSenha == ''){
+    echo "Preencha todos os campos.";
+  }else{
+    if($senha != $cSenha){
+      echo "Confirmação de senha invalida.";
+    }
+    else{
+      $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+
+      $sql = 'insert into usuario (nome, email, senha, telefone, datanascimento) values (?, ?, ?, ?, ?)';
+      
+      $prepare = $pdo->prepare($sql);
+      
+      //passando dados para o banco
+      $prepare->bindParam(1, $_SESSION['name']);
+      $prepare->bindParam(2, $_SESSION['email']);
+      $prepare->bindParam(3, $senha);
+      $prepare->bindParam(4, $_SESSION['phone']);
+      $prepare->bindParam(5, $data);
+
+      $prepare->execute();
+      echo "Conta cadastrada, faça login na próxima pagína";
+      header('Location: login.php');
+
+    }
+  }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -6,28 +44,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tela de Login</title>
     <link rel="stylesheet" href="./css/cadastro2.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <link href="./bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.min.css" rel="stylesheet">
   </head>
   <body>
-     <!-- Header -->
-     <header>
-      <div class="container_logo">
-          <a href="#">
-            <img src="./assets/logo.svg" alt="Tres Bolinhas atras da logo do produto" />
-          </a>
-      <!-- Botoões -->
-          <a class="botao" href="#">Logo</a>
-      </div>
-      <div class="container_botoes">
-          <a class="botao" href="#">Home</a>
-          <a class="botao" href="#">Info</a>
-          <a class="botao" href="#">Cursos</a>
-      </div>
-      <!-- Login e cadastro -->
-      <div class="container_login">
-          <a class="botao" href="#">Sign Up</a>
-          <button class="entrar" href="#">Log In</button>
-      </div>
-  </header>
+  <!-- Header -->
+    <?php 
+      include_once './includes/header.php';
+    ?>   
   <!-- fim Header -->
     <!-- FORMS -->
     <article>
@@ -38,11 +67,11 @@
     </article>
     <section class="coluna-a">
       <main>
-        <form>
+        <form action="" method="post">
           <h3>Data de nascimento</h3>
           <input
             type="date"
-            name="data-de-nascimento"
+            name="data"
             placeholder="Data de nascimento"
             maxlength="200"
           />
@@ -51,15 +80,13 @@
             type="password"
             name="senha"
             placeholder="Senha:"
-            pattern="[a-zA-Z-0-9] {5}"
             maxlength="200"
           />
           <h3>Confirme a senha</h3>
           <input
             type="password"
-            name="confimar-senha"
+            name="confSenha"
             placeholder="Confirmação de senha"
-            pattern="[a-zA-Z-0-9] {5}"
             maxlength="200"
           />
           <h3>Termos de compromisso:</h3>
@@ -74,7 +101,7 @@
             </div>
           </div>
           <button onclick="" name="aceito" id="aceito">Aceito</button>
-          <button onclick="" name="proximo" id="proximo">Proximo -></button>
+          <button type="submit" name="proximo" id="proximo">Proximo -></button>
         </form>
       </main>
       <!-- SVG -->
