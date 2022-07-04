@@ -1,3 +1,37 @@
+<?php 
+    $pdo = require './php/connect.php';
+	error_reporting(E_ERROR | E_PARSE);
+    if(isset($_POST['email'])){
+
+
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+
+
+        $sql = 'select * from usuario where email = ? limit 1';
+
+        $prepare = $pdo->prepare($sql);
+
+        $prepare->bindParam(1, $email);
+        $prepare->execute();
+
+        $usuario = $prepare->fetch(PDO::FETCH_ASSOC);
+        if(password_verify($senha, $usuario['senha'])){
+            echo "Logado";
+            
+
+            session_start();
+            $_SESSION['nome'] = $usuario['nome'];
+            echo $_SESSION['nome'];
+            header('Location: cadastro_concluido.php');
+        }else{
+            $error =  "<div class='alert alert-danger'>
+			<button class='close' data-dismiss='alert'><i class='pci-cross pci-circle'></i></button>
+				<strong>Oh snap!</strong> Email ou senha incorretos.
+				</div>";
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -33,44 +67,9 @@
 <body>
 	<div id="container" class="cls-container">
 		<!--Barra de Navegação-->
-
-		<nav class="navbar bg-light rounded-4 mt-4">
-			<div class="container-fluid">
-				<a class="navbar-brand image_logo" href="index.html"></a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-					data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="offcanvas offcanvas-end bg-purple" tabindex="-1" id="offcanvasNavbar"
-					aria-labelledby="offcanvasNavbarLabel">
-					<div class="offcanvas-header">
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
-						<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-							<li class="nav-item">
-								<a class="nav-link" href="#">Cursos</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Guia Cultural</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Professores</a>
-							</li>
-							<li class="nav-item text-center">
-								<button type="button" class="btn btn-lg btn-purple mx-3" id="log-in"
-									href="./cadastro1.html">Cadastrar</button>
-							</li>
-							<li class="nav-item text-center">
-								<button type="button" class="btn btn-lg btn-purple"
-									href="./cadastro1.html">Entrar</button>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</nav>
-
+		<?php 
+			include_once './includes/header.php';
+		?>
 		<!--Fim da Barra de Navegação-->
 		<!--===================================================-->
 		<!-- LOGIN FORM -->
@@ -94,17 +93,22 @@
 					<p class="media-body text-left text-bold text-main bord-top text_white"><br>Ou entre com sua conta
 						T&C</p>
 
-					<form action="index.html">
+					<form action="" method="post">
 						<div class="form-group">
-							<input type="text" class="form-control email" id="exampleFormControlInput1"
-								placeholder="Username" autofocus>
+							<input type="email" class="form-control email" id="exampleFormControlInput1"
+								placeholder="Email" name="email" autofocus>
 						</div>
 						<div class="form-group">
 							<input type="password" class="form-control senha" id="exampleInputPassword1"
-								placeholder="Password">
+								placeholder="Senha" name="senha">
 						</div>
 						<button class="btn btn-purple btn-lg btn-block text_white" type="submit">Logar</button>
 					</form>
+					<div>
+						<?php 
+							echo $error
+						?>
+					</div>
 				</div>
 
 				<div class="pad-all">
@@ -132,7 +136,6 @@
 	<script src="./js/funtion.min.js"></script>
 
 	<!--BootstrapJS-->
-	<script src="./bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
 	<!--=================================================-->
 
 </body>
