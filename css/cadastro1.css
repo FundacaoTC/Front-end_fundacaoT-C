@@ -1,144 +1,87 @@
-/*=== GERAL ====*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  :root {
-    --titulo: hsla(0, 0%, 0%, 1);
-    --conteudo: hsla(0, 0%, 100%, 1);
-    --secundario: hsla(237, 10%, 41%, 1);
-    --botoes: hsla(237, 100%, 96%, 1);
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+body {
+  background-image: url(../assets/nova_etapa01.svg);
+  background-position-x:right;
+  background-position-y: 100px;
+  background-repeat: no-repeat;
+  background-size: 36rem;
+}
 
+
+/*Media Query*/
+
+@media(max-width:991px){
   body {
-    overflow-x: hidden;
+    background-image: url(../assets/nova_etapa.svg);
+    background-position-x:center;
+    background-position-y: 550px;
+    background-repeat: no-repeat;
+    background-size: 36rem;
   }
+}
+
+@media(max-width:436px){
+  .pad-all{
+    display:flex;
+    flex-direction: column;
   
+  }
+}
+
+/*Fim de Media Query*/
+
+
 /*Barra de Navegação*/
 
-/*Fim Barra de Navegação*/
-  /*=== Article ====*/
-  article h1 {
-    max-width: 800px; 
-    min-width: 320px; 
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 4rem;
-    line-height: 5rem;
-    color: var(--titulo);
-    margin-top: 1.5rem;
-  }
-  
-  /*=== FORMS e Butões ====*/
-  form h3 {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.8rem;
-    line-height: 5rem;
-    margin-top: 1rem;
-    max-width: 800px;
-  }
-  form input {
-    margin-top: .5rem;
-    border: 1px solid;
-    border-radius: 7px;
-    background-color: var(--botoes);
-    width: 100%;
-    height: 3.5rem;
-    max-width: 559px;
-    max-height: 45px;
-    outline: 0 none;
-    box-shadow: none;
-    box-shadow: none;
-  }
-  form input:focus {
-    box-shadow:0px -5px 0px 0px #7579FF inset;
-  }
-
-  form input {
-    max-width: 70%;
-  }
-  
-  #proximo {
-    background-color: var(--botoes);
-    margin-left: 20px;
-  }
-  #proximo {
-    background-color: #7579ff;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    color: var(--conteudo);
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.2rem;
-    line-height: 3.2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin-top: 2rem;
-    
-  }
-  #proximo {
-    outline: none;
-  }
-  /*=== SECTIONS ====*/
-  
- .svg-container{
-  max-width: 100%;
-  margin-left: 14%;
-  flex-wrap: wrap;
- }
-  
-
- .titulo{
-  top: 53%;
-  left: 85%;
-  transform: translate(-50%, -50%);
-  font-family: 'Poppins';
-  font-size: 1.7vw;
-  color: var(--conteudo);
- }
-
- .sub{
-  top: 89%;
-  left: 85%;
-  transform: translate(-50%, -50%);
-  font-family: 'Poppins';
-  font-size: 1.2vw;
-  color: #fff;
- }
- 
-  
-  /*=== FOOTER ====*/
-  footer{
-    height: auto;
-    position: relative;
-  }
-  .cadastro-prof {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 550;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    text-transform: uppercase;
-  
-    margin-top: 2rem;
-    margin-left: 2rem;
-  }
-  .rodape {
-    position: relative;
-    width: 100%;
-    margin-top: 2rem;
-    bottom:0;
-  }
-  .ondas{
-    width: 100%;
+.navbar {
+  background: linear-gradient(180deg, #2D0C58 0%, #25074D 100%);
+  font-weight: 500;
+  margin-left: 0.70rem;
+  margin-right: 0.70rem;
 }
-  
-  /*=== MEDIA QUERRIES ====*/
-  
+
+.navbar a {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.navbar a:hover {
+  color: #AA3EFE !important;
+}
+
+#logo {
+  font-weight: 500;
+}
+
+.image_logo {
+  background-image: url(../assets/logo.svg);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 55px;
+}
+
+.image_logo:hover {
+  background-image: url(../assets/logo_hover.svg);
+  transition: 0.5s;
+}
+
+/*Fim Barra de Navegação*/
+
+  .text_black{
+    color: #000000;
+  }
+  .text_white{
+    color: #ffffff;
+  }
+  .size_titulo{
+    font-size:25px;
+  }
+  .size{
+    font-size:15px;
+    line-height: 25px;
+  }
 

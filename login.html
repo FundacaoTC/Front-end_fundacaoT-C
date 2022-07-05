@@ -54,7 +54,7 @@
 	<link href="./bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css" rel="stylesheet">
 
 
-	<!--Nifty Stylesheet [ REQUIRED ]-->
+	<!--Style Stylesheet [ REQUIRED ]-->
 	<link href="./css/style.min.css" rel="stylesheet">
 	<link href="css/login.css" rel="stylesheet">
 
@@ -67,11 +67,48 @@
 <body>
 	<div id="container" class="cls-container">
 		<!--Barra de Navegação-->
+<<<<<<< Updated upstream
 		<?php 
 			include_once './includes/header.php';
 		?>
+=======
+		<nav class="navbar bg-light rounded-4 mt-4">
+			<div class="container-fluid">
+				<a class="navbar-brand image_logo" href="index.html"></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="offcanvas offcanvas-end bg-purple" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+					<div class="offcanvas-header">
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+							<li class="nav-item">
+								<a class="nav-link" href="#">Cursos</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Guia Cultural</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Professores</a>
+							</li>
+							<li class="nav-item text-center">
+								<button type="button" class="btn btn-lg btn-purple mb-3" onclick="window.location.href='./cadastro1.html'">Cadastrar</button>
+							</li>
+							<li class="nav-item text-center">
+								<button type="button" class="btn btn-lg btn-purple" onclick="window.location.href='./login.html'">Entrar</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+>>>>>>> Stashed changes
 		<!--Fim da Barra de Navegação-->
 		<!--===================================================-->
+		
 		<!-- LOGIN FORM -->
 		<!--===================================================-->
 		<div class="cls-content">
@@ -121,6 +158,7 @@
 	<footer>
 		<img src="./assets/wave.svg" alt="Ondas do Rodapé" width="100%">
 	</footer>
+
 	<!--===================================================-->
 	<!-- END OF CONTAINER -->
 
