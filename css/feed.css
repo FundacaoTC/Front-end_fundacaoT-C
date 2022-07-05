@@ -173,6 +173,12 @@ body{
   color: #3c295f;
 }
 
+.perfil-bg{
+  background-image: url(../assets/Feed/perfil-bg.svg);
+  background-repeat: no-repeat;
+  
+}
+
 /*Fim do Header */
 
 /* BOTÃO VOLTAR AO TOPO */
@@ -252,7 +258,26 @@ main {
 .favoritas h5{
   font-size: 1.48em;
 }
-/*Fim de Main Cards*/
+
+/* Feed meio*/
+.box{
+  width:700px;
+  height: 300px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.feed-meio-bg{
+  background-image: url(../assets/Feed/feed-meio-Introdução-para-desenvolvimento-web.svg);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.mt-15{
+  margin-top: 15%;
+}
 
 
 /*Quem Somos*/
