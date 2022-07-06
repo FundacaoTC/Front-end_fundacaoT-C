@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+/*Media Query*/
+
+@media(max-width:436px){
+    .pad-all{
+      display:flex;
+      flex-direction: column;
+    
+    }
+  }
+  
+  /*Fim de Media Query*/
+  
+  
+  /*Barra de Navegação*/
+  
+  .navbar {
+    background: linear-gradient(180deg, #2D0C58 0%, #25074D 100%);
+    font-weight: 500;
+    margin-left: 0.70rem;
+    margin-right: 0.70rem;
+  }
+  
+  .navbar a {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  
+  .navbar a:hover {
+    color: #AA3EFE !important;
+  }
+  
+  #log-in {
+    margin: 15px 0rem;
+  }
+  
+  #logo {
+    font-weight: 500;
+  }
+  
+  .image_logo {
+    background-image: url(../assets/logo.svg);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 55px;
+  }
+  
+  .image_logo:hover {
+    background-image: url(../assets/logo_hover.svg);
+    transition: 0.5s;
+  }
+  
+  /*Fim Barra de Navegação*/
+  
+    .panel-body{
+      padding-bottom:5px;
+    }
+    .pad-all{
+      padding-top:5px;
+    }
+    .text_white{
+      color: #fff !important;
+    }
+
+    .aluno-bg {
+        background-image: url(../assets/aluno-bg.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border-radius: 20px;
+    }
+  .box{
+    width: 100%;
+    height: 100%;
+  }
+   /*Footer*/
+  .ondas {
+    margin-top: 2%;
+    
+  }
+   .mt-7{
+    margin-top: 100px;
+   }
+  
+  /*Fim de Footer*/  
